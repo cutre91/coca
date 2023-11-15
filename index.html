@@ -1,5 +1,366 @@
-<script>
-<!--
-document.write(unescape("%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22es%22%3E%0A%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%20%20%20%20%3Ctitle%3EOportunidades%20de%20Trabajo%20en%20Coca-Cola%3C/title%3E%0A%20%20%20%20%3Cmeta%20property%3D%22og%3Aimage%22%20content%3D%22coca.jpg%22%3E%0A%20%20%20%20%3Cmeta%20property%3D%22og%3Adescription%22%20content%3D%22Empieza%202024%20trabajando%20para%20Coca-Cola%22%3E%0A%20%20%20%20%3C%21--%20Imagen%20que%20se%20compartir%E1%20en%20el%20link%20a%20compartir%20--%3E%0A%20%20%20%20%3Clink%20href%3D%22Coca.jpg%22%20href%3D%22https%3A//infogram91.github.io/coca/coca.jpg%22%20rel%3D%22icon%22%20alt%3D%22%22/%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20body%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23f5f5f5%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-image%3A%20url%28%27coca.jpg%27%29%3B%20/*%20Reemplaza%20con%20la%20ruta%20de%20tu%20imagen%20*/%0A%20%20%20%20%20%20%20%20%20%20%20%20background-size%3A%20cover%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-position%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-repeat%3A%20no-repeat%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20header%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20h1%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2036px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23a7e056%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.introduccion%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%2020px%200%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.introduccion%20div%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20300px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%202px%205px%20rgba%280%2C%200%2C%200%2C%200.1%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%200%20auto%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.introduccion%20h2%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2028px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.introduccion%20p%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2016px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20line-height%3A%201.5%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.vacante%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20300px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%202px%205px%20rgba%280%2C%200%2C%200%2C%200.1%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%200%20auto%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.vacante%20h2%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2024px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.vacante%20p%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2016px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20line-height%3A%201.5%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.postulacion%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.postulacion%3Ahover%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23cc0000%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20/*%20Estilos%20para%20la%20fecha%20de%20publicaci%F3n%20*/%0A%20%20%20%20%20%20%20%20.fecha%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2018px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23333%3B%20/*%20Fondo%20oscuro%20*/%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20/*%20Estilos%20para%20los%20cupos%20disponibles%20*/%0A%20%20%20%20%20%20%20%20.cupos-container%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2018px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23333%3B%20/*%20Fondo%20oscuro%20*/%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.cupos%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23a7e056%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.cupos%20span%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup-container%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23f5f5f5%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%202px%20solid%20%23333%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%202px%205px%20rgba%280%2C%200%2C%200%2C%200.3%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20top%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20left%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20transform%3A%20translate%28-50%25%2C%20-50%25%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20z-index%3A%20999%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.show-popup%20.popup-container%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20block%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup-container%20h2%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup-container%20p%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2016px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20line-height%3A%201.5%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup-button%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup-button%3Ahover%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23cc0000%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.blocker-container%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20rgba%280%2C%200%2C%200%2C%200.7%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20z-index%3A%20999%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.blocker-content%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.blocker-button%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ff0000%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.blocker-button%3Ahover%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23cc0000%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.oferta-cpa%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%202px%20solid%20%23333%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%202px%205px%20rgba%280%2C%200%2C%200%2C%200.3%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20top%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20left%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20transform%3A%20translate%28-50%25%2C%20-50%25%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20z-index%3A%20999%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.oferta-cpa-content%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2018px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23333%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.oferta-cpa-content%20a%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-decoration%3A%20underline%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%3C/head%3E%0A%3Cbody%3E%0A%0A%20%20%20%20%3Cheader%3E%0A%20%20%20%20%20%20%20%20%3Ch1%3E%DAnete%20a%20la%20Familia%20Coca-Cola%20en%20Villaguay%3C/h1%3E%0A%20%20%20%20%3C/header%3E%0A%0A%20%20%20%20%3Csection%20class%3D%22introduccion%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%BFEst%E1s%20buscando%20trabajo%3F%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%A1Tenemos%20emocionantes%20oportunidades%20laborales%20para%20ti%21%20Coca-Cola%20en%20Villaguay%20est%E1%20en%20busca%20de%20personas%20talentosas%20y%20apasionadas%20para%20unirse%20a%20nuestro%20equipo.%20Descubre%20los%20puestos%20disponibles%20a%20continuaci%F3n%20y%20post%FAlate%20para%20formar%20parte%20de%20la%20familia%20Coca-Cola.%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/section%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22vacante%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3ERecepcionistas%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3ESi%20eres%20amable%2C%20atento%20y%20disfrutas%20de%20la%20interacci%F3n%20con%20personas%2C%20esta%20podr%EDa%20ser%20la%20posici%F3n%20perfecta%20para%20ti.%20Las%20funciones%20incluyen%20recibir%20a%20visitantes%2C%20gestionar%20llamadas%20telef%F3nicas%20y%20proporcionar%20un%20servicio%20excepcional%20al%20cliente.%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22postulacion%22%20onclick%3D%22showPopup%28%27Recepcionistas%27%29%22%3EPost%FAlate%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22vacante%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3EConductores%20de%20Transporte%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3ESi%20tienes%20una%20licencia%20de%20conducir%20y%20habilidades%20de%20manejo%20seguras%2C%20puedes%20unirte%20a%20nuestro%20equipo%20de%20conductores%20de%20transporte.%20Entregar%E1s%20nuestros%20productos%20a%20clientes%20y%20puntos%20de%20venta%20en%20la%20regi%F3n%20de%20Villaguay.%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22postulacion%22%20onclick%3D%22showPopup%28%27Conductores%20de%20Transporte%27%29%22%3EPost%FAlate%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22fecha%22%3E%0A%20%20%20%20%20%20%20%20Fecha%20de%20publicaci%F3n%3A%20%3Cspan%20id%3D%22fecha-actual%22%3E%3C/span%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22cupos-container%22%3E%0A%20%20%20%20%20%20%20%20Cupos%20disponibles%3A%20%3Cdiv%20class%3D%22cupos%22%3E%3Cspan%20id%3D%22cupos-disponibles%22%3E25%3C/span%3E%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22blocker-container%22%20id%3D%22blocker-container%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22blocker-content%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3EPara%20acceder%20a%20la%20oferta%2C%20por%20favor%20comparte%20esta%20p%E1gina%20en%20al%20menos%20una%20red%20social.%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22blocker-button%22%20onclick%3D%22hideBlocker%28%29%22%3ECerrar%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22show-popup%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22popup-container%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%A1Post%FAlate%20para%20un%20emocionante%20puesto%20en%20Coca-Cola%20en%20Villaguay%21%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20id%3D%22contador-text%22%3EComparte%20para%20completar%20el%20formulario%20a%20continuaci%F3n%20y%20enviar%20tu%20solicitud.%20Te%20contactaremos%20pronto.%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22popup-button%22%20onclick%3D%22shareOnWhatsApp%28%27%A1Post%FAlate%20para%20un%20emocionante%20puesto%20en%20Coca-Cola%20en%20Villaguay%20https%3A//l1nq.com/villaguay%21%27%29%22%3ECompartir%20en%20WhatsApp%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22oferta-cpa%22%20id%3D%22oferta-cpa%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22oferta-cpa-content%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%A1Felicidades%21%20Has%20compartido%203%20veces.%20Completa%20la%20siguiente%20pagina%20para%20pasar%20a%20la%20inscripci%F3n%3A%20%3Ca%20href%3D%22https%3A//singingfiles.com/show.php%3Fl%3D0%26u%3D1791518%26id%3D54788%22%20target%3D%22_blank%22%3EOferta%20CPA%20en%20Facebook%3C/a%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20let%20contadorCompartir%20%3D%200%3B%0A%20%20%20%20%20%20%20%20const%20contadorText%20%3D%20document.getElementById%28%27contador-text%27%29%3B%0A%0A%20%20%20%20%20%20%20%20function%20showPopup%28vacante%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20const%20popupContainer%20%3D%20document.querySelector%28%27.popup-container%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20const%20popupButton%20%3D%20document.querySelector%28%27.popup-button%27%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20popupContainer.style.display%20%3D%20%27block%27%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20Modifica%20el%20mensaje%20del%20pop-up%20de%20acuerdo%20a%20la%20vacante%0A%20%20%20%20%20%20%20%20%20%20%20%20popupContainer.querySelector%28%27h2%27%29.textContent%20%3D%20%60%A1Post%FAlate%20para%20el%20puesto%20de%20%24%7Bvacante%7D%20en%20Coca-Cola%20en%20Villaguay%21%60%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popupButton.textContent%20%3D%20%27Compartir%20en%20WhatsApp%27%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20shareOnWhatsApp%28text%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20contadorCompartir++%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20updateContadorText%28%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20Comprueba%20si%20es%20una%20versi%F3n%20m%F3vil%20o%20web%20y%20crea%20el%20enlace%20de%20WhatsApp%20correspondiente%0A%20%20%20%20%20%20%20%20%20%20%20%20const%20url%20%3D%20encodeURIComponent%28%27https%3A//infogram91.github.io/coca/%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text%20%3D%20encodeURIComponent%28text%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20Comprueba%20si%20es%20una%20versi%F3n%20m%F3vil%20o%20web%20y%20crea%20el%20enlace%20de%20WhatsApp%20correspondiente%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28isMobile%28%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.location.href%20%3D%20%60whatsapp%3A//send%3Ftext%3D%24%7Btext%7D%2520%24%7Burl%7D%60%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.open%28%60https%3A//web.whatsapp.com/send%3Ftext%3D%24%7Btext%7D%2520%24%7Burl%7D%60%2C%20%27_blank%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28contadorCompartir%20%3E%3D%203%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mostrarOfertaCPA%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20updateContadorText%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20contadorText.textContent%20%3D%20%60Comparte%20%24%7B3%20-%20contadorCompartir%7D%20veces%20m%E1s%20para%20completar%20el%20formulario%20a%20continuaci%F3n%20y%20enviar%20tu%20solicitud.%20Te%20contactaremos%20pronto.%60%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20mostrarOfertaCPA%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20const%20ofertaCPA%20%3D%20document.getElementById%28%27oferta-cpa%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20ofertaCPA.style.display%20%3D%20%27block%27%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20hideBlocker%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20const%20blockerContainer%20%3D%20document.getElementById%28%27blocker-container%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20blockerContainer.style.display%20%3D%20%27none%27%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20isMobile%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20/Android%7CwebOS%7CiPhone%7CiPad%7CiPod%7CBlackBerry%7CIEMobile%7COpera%20Mini/i.test%28navigator.userAgent%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20//%20C%F3digo%20para%20actualizar%20el%20contador%20de%20cupos%20cada%202%20segundos%0A%20%20%20%20%20%20%20%20let%20cupos%20%3D%20400%3B%20//%20Cambia%20a%20400%0A%20%20%20%20%20%20%20%20const%20cuposSpan%20%3D%20document.getElementById%28%27cupos-disponibles%27%29%3B%0A%0A%20%20%20%20%20%20%20%20function%20updateCupos%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28cupos%20%3E%200%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cupos--%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cuposSpan.textContent%20%3D%20cupos%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20setInterval%28updateCupos%2C%202000%29%3B%20//%20Actualiza%20cada%202%20segundos%0A%0A%20%20%20%20%20%20%20%20const%20fechaActual%20%3D%20new%20Date%28%29%3B%0A%20%20%20%20%20%20%20%20const%20fechaActualFormatted%20%3D%20fechaActual.toLocaleDateString%28%27es-ES%27%29%3B%0A%20%20%20%20%20%20%20%20document.getElementById%28%27fecha-actual%27%29.textContent%20%3D%20fechaActualFormatted%3B%0A%20%20%20%20%3C/script%3E%0A%3C/body%3E%0A%3C/html%3E"));
-//-->
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidades de Trabajo en Coca-Cola</title>
+    <meta property="og:image" content="coca.jpg">
+    <meta property="og:description" content="Empieza 2024 trabajando para Coca-Cola">
+    <!-- Imagen que se compartirá en el link a compartir -->
+    <link href="Coca.jpg" href="https://infogram91.github.io/coca/coca.jpg" rel="icon" alt=""/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            background-image: url('coca.jpg'); /* Reemplaza con la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            border-radius: 5px;
+            background-color: #a7e056;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .introduccion {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .introduccion div {
+            display: inline-block;
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .introduccion h2 {
+            font-size: 28px;
+            color: #ff0000;
+        }
+
+        .introduccion p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .vacante {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .vacante h2 {
+            font-size: 24px;
+            color: #ff0000;
+        }
+
+        .vacante p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .postulacion {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .postulacion:hover {
+            background-color: #cc0000;
+        }
+
+        /* Estilos para la fecha de publicación */
+        .fecha {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333; /* Fondo oscuro */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Estilos para los cupos disponibles */
+        .cupos-container {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333; /* Fondo oscuro */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cupos {
+            background-color: #a7e056;
+            border-radius: 5px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .cupos span {
+            color: #fff;
+        }
+
+        .popup-container {
+            background-color: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+        .show-popup .popup-container {
+            display: block;
+        }
+
+        .popup-container h2 {
+            color: #ff0000;
+        }
+
+        .popup-container p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .popup-button {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-button:hover {
+            background-color: #cc0000;
+        }
+
+        .blocker-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            display: none;
+        }
+
+        .blocker-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .blocker-button {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .blocker-button:hover {
+            background-color: #cc0000;
+        }
+
+        .oferta-cpa {
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+        .oferta-cpa-content {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .oferta-cpa-content a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Únete a la Familia Coca-Cola en Villaguay</h1>
+    </header>
+
+    <section class="introduccion">
+        <div>
+            <h2>¿Estás buscando trabajo?</h2>
+            <p>¡Tenemos emocionantes oportunidades laborales para ti! Coca-Cola en Villaguay está en busca de personas talentosas y apasionadas para unirse a nuestro equipo. Descubre los puestos disponibles a continuación y postúlate para formar parte de la familia Coca-Cola.</p>
+        </div>
+    </section>
+
+    <div class="vacante">
+        <div>
+            <h2>Recepcionistas</h2>
+            <p>Si eres amable, atento y disfrutas de la interacción con personas, esta podría ser la posición perfecta para ti. Las funciones incluyen recibir a visitantes, gestionar llamadas telefónicas y proporcionar un servicio excepcional al cliente.</p>
+        </div>
+        <div class="postulacion" onclick="showPopup('Recepcionistas')">Postúlate</div>
+    </div>
+
+    <div class="vacante">
+        <div>
+            <h2>Conductores de Transporte</h2>
+            <p>Si tienes una licencia de conducir y habilidades de manejo seguras, puedes unirte a nuestro equipo de conductores de transporte. Entregarás nuestros productos a clientes y puntos de venta en la región de Villaguay.</p>
+        </div>
+        <div class="postulacion" onclick="showPopup('Conductores de Transporte')">Postúlate</div>
+    </div>
+
+    <div class="fecha">
+        Fecha de publicación: <span id="fecha-actual"></span>
+    </div>
+
+    <div class="cupos-container">
+        Cupos disponibles: <div class="cupos"><span id="cupos-disponibles">25</span></div>
+    </div>
+
+    <div class="blocker-container" id="blocker-container">
+        <div class="blocker-content">
+            <p>Para acceder a la oferta, por favor comparte esta página en al menos una red social.</p>
+            <div class="blocker-button" onclick="hideBlocker()">Cerrar</div>
+        </div>
+    </div>
+
+    <div class="show-popup">
+        <div class="popup-container">
+            <h2>¡Postúlate para un emocionante puesto en Coca-Cola en Villaguay!</h2>
+            <p id="contador-text">Comparte 3 veces desde aqui una por vez para completar el formulario a continuación y enviar tu solicitud. Te contactaremos pronto.</p>
+            <div class="popup-button" onclick="shareOnWhatsApp('¡Postúlate para un emocionante puesto en Coca-Cola en Villaguay!')">Compartir en WhatsApp</div>
+        </div>
+    </div>
+
+    <div class="oferta-cpa" id="oferta-cpa">
+        <div class="oferta-cpa-content">
+            <p>¡Felicidades! Has compartido 3 veces. Completa la siguiente pagina para pasar a la inscripción: <a href="https://singingfiles.com/show.php?l=0&u=1791518&id=54788" target="_blank">Oferta CPA en Facebook</a></p>
+        </div>
+    </div>
+
+    <script>
+        let contadorCompartir = 0;
+        const contadorText = document.getElementById('contador-text');
+
+        function showPopup(vacante) {
+            const popupContainer = document.querySelector('.popup-container');
+            const popupButton = document.querySelector('.popup-button');
+
+            popupContainer.style.display = 'block';
+
+            // Modifica el mensaje del pop-up de acuerdo a la vacante
+            popupContainer.querySelector('h2').textContent = `¡Postúlate para el puesto de ${vacante} en Coca-Cola en Villaguay!`;
+            popupButton.textContent = 'Compartir en WhatsApp';
+        }
+
+        function shareOnWhatsApp(text) {
+            contadorCompartir++;
+            updateContadorText();
+
+            // Comprueba si es una versión móvil o web y crea el enlace de WhatsApp correspondiente
+            const url = encodeURIComponent('https://l1nq.com/villaguay'); // enlace a compartir acortado
+            text = encodeURIComponent(text);
+
+            // Comprueba si es una versión móvil o web y crea el enlace de WhatsApp correspondiente
+            if (isMobile()) {
+                window.location.href = `whatsapp://send?text=${text}%20${url}`;
+            } else {
+                window.open(`https://web.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+            }
+
+            if (contadorCompartir >= 3) {
+                mostrarOfertaCPA();
+            }
+        }
+
+        function updateContadorText() {
+            contadorText.textContent = `Comparte ${3 - contadorCompartir} veces más para completar el formulario a continuación y enviar tu solicitud. Te contactaremos pronto.`;
+        }
+
+        function mostrarOfertaCPA() {
+            const ofertaCPA = document.getElementById('oferta-cpa');
+            ofertaCPA.style.display = 'block';
+        }
+
+        function hideBlocker() {
+            const blockerContainer = document.getElementById('blocker-container');
+            blockerContainer.style.display = 'none';
+        }
+
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Código para actualizar el contador de cupos cada 2 segundos
+        let cupos = 400; // Cambia a 400
+        const cuposSpan = document.getElementById('cupos-disponibles');
+
+        function updateCupos() {
+            if (cupos > 0) {
+                cupos--;
+                cuposSpan.textContent = cupos;
+            }
+        }
+
+        setInterval(updateCupos, 2000); // Actualiza cada 2 segundos
+
+        const fechaActual = new Date();
+        const fechaActualFormatted = fechaActual.toLocaleDateString('es-ES');
+        document.getElementById('fecha-actual').textContent = fechaActualFormatted;
+    </script>
+</body>
+</html>
